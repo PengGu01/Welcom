@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.peng.mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PengComp303Assignment3ApplicationTests {
+class Lab1ApplicationTests {
 
 	@Test
 	void contextLoads() {

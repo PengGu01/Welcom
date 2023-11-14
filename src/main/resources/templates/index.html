@@ -1,12 +1,103 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!--
+ * Student Name: Peng Gu
+ * StudentId:301240546
+ * Submit Day:09 July,2023
+ *  -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>CustomerList</title>
- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <link rel="stylesheet" type="text/css" href="Formatting.css">
 
+  <style>
+   
+  </style>
+   <script>
+        function resetData() {
+            document.getElementById("submitForm").reset();
+        }
+    </script>
 </head>
 <body>
-<h1>Welcome to COMP367</h1>
+ <h2>Hotel Reservation Form</h2>
+  <form action="http://127.0.0.1:8084/postReservation" id="submitForm" method="POST" enctype="application/x-www-form-urlencoded">
+    <table>
+      <tr>
+        <th>First Name:<span class="required-star">*</span></th>
+        <td><input type="text" name="firstName" required></td>
+      </tr>
+      <tr>
+        <th>Last Name:<span class="required-star">*</span></th>
+        <td><input type="text" name="lastName" required></td>
+      </tr>
+
+      <tr>
+      	 <th>Phone Number:<span class="required-star">*</span>
+       <td>Area Code:<input type="text" name="areaCode" required>-<input type="text" name="phoneNumber" required></td>
+      </tr>
+      <tr>
+        <th>Email:<span class="required-star">*</span></th>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+      <th>Address:</th>
+        <td>Street Address:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="streetAddress" required></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>Street Address Line 2:<input type="text" name="streetAddressLine2"></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>City:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="city" required>&nbspState:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="state" required></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>Postal Code:<input type="text" name="postal" required>&nbspCountry Code:<input type="text" name="country" required></td>
+      </tr> 
+      <tr>
+        <th>Accommodations</th><td></td>
+      </tr>
+      <tr>
+        <th>Arrival Date:</th>
+        <td><input type="date" name="arrivalDate" required></td>
+      </tr>
+      <tr>
+        <th>Departure Date:</th>
+        <td><input type="date" name="departureDate" required></td>
+      </tr>
+      <tr>
+        <th>Room Type:</th>
+         <td>
+	        <input type="radio" name="roomType" value="100">$100/Night - Mountain View $100.00
+	        <input type="radio" name="roomType" value="120">$120/Night - Ocean View $120.00
+	        <input type="radio" name="roomType" value="140">$140 - City Views 140.00
+      </tr>
+      <tr>
+        <th>Number of Room Night:</th>
+        <td><input type="number" name="numberOfRoomNight" required></td>
+      </tr>
+      <tr>
+        <th>Number of Adults:</th>
+        <td><input type="number" name="adultNum" required></td>
+      </tr>
+      <tr>
+        <th>Number of Kids:</th>
+        <td><input type="number" name="kidsNum" required></td>
+      </tr>
+      <tr>
+        <th>Payment Method:</th>
+        <td>
+	        <input type="radio" name="paymentMethod" value="Credit Card">Credit Card
+	        <input type="radio" name="paymentMethod" value="Paypal">Paypal
+	        <input type="radio" name="paymentMethod" value="Debit Card">Debit Card
+        </td>
+      </tr>
+      <table>
+      <button type="submit" class="custom-submit">Submit</button>
+      <button type="button" class="custom-submit" onclick="resetData()">Reset</button>
+      
+  </form>
 </body>
 </html>

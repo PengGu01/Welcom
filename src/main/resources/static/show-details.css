@@ -1,0 +1,24 @@
+/**
+ * Student Name: Peng Gu
+ * StudentId:301240546
+ * Submit Day:09 July,2023
+ * */
+
+#table{
+ 	text-align: left;
+ }
+        .blue-text {
+            color: blue;
+            text-align: left;
+        }
+        
+        .red-text th, td{
+            color: red;
+            text-align: left;
+           	padding-left: 20px;
+        }
+        .purple-text th, td{
+            color: purple;
+             text-align: left;
+             padding-left: 50px;
+        }

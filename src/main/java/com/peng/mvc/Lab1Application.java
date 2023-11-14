@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.peng.mvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PengComp303Assignment3Application {
+public class Lab1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PengComp303Assignment3Application.class, args);
+		SpringApplication.run(Lab1Application.class, args);
 	}
 
 }

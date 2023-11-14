@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+ * Student Name: Peng Gu
+ * StudentId:301240546
+ * Submit Day:09 July,2023
+ *  -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Show Detail Page</title>
+<link rel="stylesheet" type="text/css" href="show-details.css">
+ <style>
+ 
+</style>
+</head>
+<body>
+ <h2 >Welcom   <td th:text="${reservation.firstName}"></td></h2>
+ <body>
+    <table>
+     <tr class="blue-text">
+            <th>Your registration details are as follows:</th>
+            <td ></td>
+        </tr>
+        <tr class="red-text">
+            <th>• Phone Number:<span th:text="${reservation.areaCode + '-' + reservation.phoneNumber}"></span></th>
+        </tr>
+        <tr class="red-text">
+            <th>• Email:<span th:text="'  '+${reservation.email}"></span></th>
+        </tr>
+        <tr class="red-text">
+            <th>• Address: <span th:text="${reservation.streetAddress + '-' + reservation.streetAddressLine2
+             + '-' + reservation.city+ '-' + reservation.postal}"></span></th>
+        </tr>
+       <tr class="purple-text">
+            <th></th>
+        </tr>
+        <tr class="purple-text">
+            <th></th>
+        </tr>
+        <tr class="purple-text">
+            <th></th>
+        </tr>
+        <tr  class="purple-text">
+            <th>Your Stay Dates:<span th:text="${reservation.arrivalDate + ' to ' + reservation.depatureDate}"></span></th>
+        </tr>
+       
+        <tr class="purple-text">
+            <th>Room Type: <span th:text="${reservation.roomTypeText}"></span></th>
+           
+        </tr>
+        <tr class="purple-text">
+            <th>Number of Nights:<span th:text="${'  '+reservation.numberOfRoomNight+' nights'}"> </span></th>        
+        </tr>
+        <tr class="purple-text">
+            <th>Number of Guests: <span th:text="${reservation.adultNum + ' Adults ' + reservation.kidsNum+' Kids'}"></span></th>
+        </tr>
+        <tr class="purple-text">
+            <th>Amount Paid: <span th:text="${' $'+reservation.roomType*reservation.numberOfRoomNight}"></span></th>
+        </tr>
+        <tr class="purple-text">
+            <th></th>
+        </tr>
+        <tr class="purple-text">
+            <th></th>
+        </tr>
+        <tr class="purple-text">
+            <th></th>
+        </tr>
+       <tr class="blue-text" style="text-align:center; width:100%;" >
+            <th colspan="2">Your online registration completed.</th>
+        </tr>
+       <tr class="blue-text"  style="text-align:center">
+        <th colspan="2">
+			We're looking forward to seeing you soon.</th>
+        </tr>
+    </table>
+</body>
+</body>
+</html>
