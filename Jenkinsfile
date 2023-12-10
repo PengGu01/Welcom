@@ -19,31 +19,10 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
+         // 添加测试阶段
+        stage('Test') {
             steps {
-                script {
-                    docker.build("myimage:${env.BUILD_ID}")
-                }
-            }
-        }
-
-        stage('Docker Login') {
-            steps {
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker') {
-                    
-                    }             
-                }
-            }
-        }
-        
-         stage('Docker Push') {
-            steps {
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker') {
-                        docker.image("pgu1@my.centennialcollege.ca/myimage:${env.BUILD_ID}}").push()
-                    }      
-                }
+                sh 'mvn test'
             }
         }
     }
